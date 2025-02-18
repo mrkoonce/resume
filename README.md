@@ -1,2 +1,2 @@
-# resume
-Resume, fully responsive
+# Resume
+Responsive resume
