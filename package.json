@@ -5,14 +5,13 @@
   "main": "index.js",
   "type": "module",
   "config": {
-    "components": "resources/assets/components",
     "pages": "src/pages"
   },
   "scripts": {
     "dev": "npm run development",
     "development": "npm run linting && vite build && npm run e8:dev && npm run pch:dev",
     "linting": "npm run eslint && npm run stylelint",
-    "eslint": "eslint $npm_package_config_components $npm_package_config_pages",
+    "eslint": "eslint $npm_package_config_pages",
     "stylelint": "stylelint \"$npm_package_config_pages/**/*.scss\"",
     "watch": "vite build --watch",
     "test": "echo \"Error: no test specified\" && exit 1"
