@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mrkoonce/resume/issues"
   },
-  "homepage": "https://github.com/mrkoonce/resume#readme"
+  "homepage": "https://github.com/mrkoonce/resume#readme",
+  "devDependencies": {
+    "vite": "^6.2.0"
+  }
 }
