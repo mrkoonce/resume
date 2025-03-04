@@ -27,7 +27,6 @@
   },
   "homepage": "https://github.com/mrkoonce/resume#readme",
   "devDependencies": {
-    "dotenv": "^16.4.7",
     "eslint": "^9.21.0",
     "eslint-config-eslint": "^11.0.0",
     "glob": "^11.0.1",
@@ -36,8 +35,8 @@
     "stylelint": "^16.15.0",
     "stylelint-config-standard": "^37.0.0",
     "stylelint-config-standard-scss": "^14.0.0",
-    "vite-plugin-browser-sync": "^4.0.0",
-    "vite": "^6.2.0"
+    "vite": "^6.2.0",
+    "vite-plugin-browser-sync": "^4.0.0"
   },
   "engines": {
     "node": ">=20"
