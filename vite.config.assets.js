@@ -20,6 +20,7 @@ export default [
     */
 
     // Resume
+    "src/pages/resume/index.html",
     "src/pages/resume/resume.scss",
     "src/pages/resume/resume.js",
 

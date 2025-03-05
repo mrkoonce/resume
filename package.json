@@ -2,18 +2,20 @@
   "name": "resume",
   "version": "1.0.0",
   "description": "Resume",
-  "main": "index.js",
+  "main": "index.html",
   "type": "module",
   "config": {
     "pages": "src/pages"
   },
   "scripts": {
     "dev": "npm run development",
-    "development": "npm run linting && vite build",
+    "development": "npm run linting && vite build && npm run cpToRoot",
+    "production": "vite build && npm run cpToRoot",
     "linting": "npm run eslint && npm run stylelint",
     "eslint": "eslint $npm_package_config_pages",
     "stylelint": "stylelint \"$npm_package_config_pages/**/*.scss\"",
-    "watch": "vite build --watch",
+    "watch": "vite",
+    "cpToRoot": "cp dist/src/pages/resume/index.html index.html",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -39,7 +41,7 @@
     "vite-plugin-browser-sync": "^4.0.0"
   },
   "engines": {
-    "node": ">=20"
+    "node": ">=20" 
   },
   "dependencies": {
     "bootstrap": "^5.3.3"

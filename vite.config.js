@@ -11,9 +11,10 @@ const currentUrl = 'localhost';
 
 
 export default defineConfig({
+    base: 'dist',
     build: {
         cssTarget: ["safari16"],
-         manifest: true,
+        manifest: true,
         rollupOptions: {
             input: assets,
         },
