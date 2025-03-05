@@ -16,6 +16,8 @@ $container-max-widths: (
 // $grid-gutter-width: 1.5rem !default;
 // $container-padding-x: $grid-gutter-width !default;
 
+// test
+
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/maps";
 @import "~bootstrap/scss/mixins";
@@ -30,5 +32,5 @@ $container-max-widths: (
 @import "~bootstrap/scss/utilities/api";
 
 body{
-    background-color: blue;
+    background-color: grey;
 }

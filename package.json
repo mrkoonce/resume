@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "npm run development",
-    "development": "npm run linting && vite build && npm run e8:dev && npm run pch:dev",
+    "development": "npm run linting && vite build",
     "linting": "npm run eslint && npm run stylelint",
     "eslint": "eslint $npm_package_config_pages",
     "stylelint": "stylelint \"$npm_package_config_pages/**/*.scss\"",
