@@ -7,16 +7,18 @@ import assets from "./vite.config.assets";
 
 
 const currentUrl = 'localhost';
- 
+
 
 
 export default defineConfig({
-    base: 'dist',
+    // base: 'dist',
+    // root: "./src/pages/resume",
     build: {
         cssTarget: ["safari16"],
-        manifest: true,
+        // outDir:"./../../../dist",
+        // manifest: true,
         rollupOptions: {
-            input: assets,
+            input: assets
         },
     },
     plugins: [
@@ -36,8 +38,8 @@ export default defineConfig({
     ],
     resolve: {
         alias: {
-            "~bootstrap": path.resolve(__dirname, "node_modules/bootstrap"),
-            "@pages": path.resolve(__dirname, "src/pages"),
+            // "~bootstrap": path.resolve(__dirname, "node_modules/bootstrap"),
+            "@shared": path.resolve(__dirname, "src/shared"),
         }
     },
     css: {
