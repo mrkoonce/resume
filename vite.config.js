@@ -11,7 +11,7 @@ const currentUrl = 'localhost';
 
 
 export default defineConfig({
-    // base: 'dist',
+    base: '/dist',
     // root: "./src/pages/resume",
     build: {
         cssTarget: ["safari16"],
