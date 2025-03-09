@@ -1,8 +1,12 @@
-@use './reset.scss';
-@use './fonts/poppins.css';
+@use '@shared/css/reset.scss';
+@use '@shared/css/fonts/poppins.css';
+@use '@shared/css/global_vars.scss';
+
 
 body{
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-style: normal;
+    background-color: #f3f4f3;
+    color: global_vars.$text-secondary;
 }

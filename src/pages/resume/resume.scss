@@ -1,5 +1,11 @@
+@use '@shared/css/global_vars.scss';
 
-
-body{
-    background-color: green;
+.bar{
+    background-color: #bcbebf;
+    height: 28px;
+}
+.wrapper{
+    max-width: 1240px;
+    // width: 800px;
+    margin: 0 global_vars.$gutter;
 }
