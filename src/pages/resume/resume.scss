@@ -1,9 +1,10 @@
-@use '@shared/css/global_vars.scss';
+@use '@shared/css/global_vars';
 
 .bar{
     background-color: #bcbebf;
     height: 28px;
 }
+
 .wrapper{
     max-width: 1240px;
     // width: 800px;
