@@ -5,7 +5,7 @@
 
 $separatorWidth: 3px;
 $separatorgradient: linear-gradient(to right, #e6e7e6c8, #e4e5e4);
-$elementSpacing: 40px;
+$elementSpacing: 30px;
 
 body {
     font-family: "Poppins", sans-serif;
@@ -13,7 +13,7 @@ body {
     font-style: normal;
     background-color: #f3f4f3;
     color: global_vars.$text-primary;
-    // font-size: 0.688rem;
+    font-size: functions.toRem(14);
     // @include mixins.sm {    
     //     font-size: 10rem; 
     //  }
@@ -31,7 +31,10 @@ h1 {
     // font-size: 2.563rem;
 }
 
-h2 {}
+h2 {
+    margin-bottom: functions.toRem(20);
+    font-size: functions.toRem(18);
+}
 
 .bar {
     background-color: #bcbebf;
@@ -44,11 +47,32 @@ ul {
     // margin-left: -40px;
     // display: contents;
 }
+.icon{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 24px;
+    &.home{
 
+    }
+}
 .wrapper {
     max-width: 1240px;
     padding: 0 global_vars.$gutter;
     margin: 0 auto;
+
+}
+
+.separator {
+    height: $separatorWidth;
+    display: block;
+    background: $separatorgradient;
+}
+
+.divider {
+    width: $separatorWidth;
+    background: $separatorgradient;
+    order: 2;
 
 }
 
@@ -78,20 +102,46 @@ header {
 }
 
 article {
+    padding: 10px 0;
+    font-size: 12px;
     &.wrapper {
         margin-top: $elementSpacing;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        // align-content: space-between;
+        gap: global_vars.$gutter;
+        margin: global_vars.$gutter 0;
+        li{
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
     }
 }
 
 main {
     display: grid;
     grid-template-columns: 210px $separatorWidth 1fr;
+    gap: 50px;
     // display: flex;
     // flex-direction: row;
     // flex-wrap: wrap;
     // align-content: space-between;
     gap: 25px;
-
+    &.wrapper {
+        margin-top: $elementSpacing;
+    }
+    .separator {
+        margin: $elementSpacing 0;
+    }
     section {
         order: 3;
         flex-grow: 1;
@@ -102,21 +152,14 @@ main {
         order: 1;
         flex-shrink: 0;
         width: 210px;
+        strong,
+        span{
+            display: block;
+        }
+        
     }
 }
 
-.separator {
-    height: $separatorWidth;
-    display: block;
-    background: $separatorgradient;
-}
-
-.divider {
-    width: $separatorWidth;
-    background: $separatorgradient;
-    order: 2;
-
-}
 
 // Print rules
 @media print {
