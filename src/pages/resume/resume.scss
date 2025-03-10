@@ -3,12 +3,12 @@
 @use '@shared/css/functions';
 
 
-$separatorWidth: 3px;
-$separatorgradient: linear-gradient(to right, #e6e7e6c8, #e4e5e4);
-$elementSpacing: 30px;
+$separator-width: 3px;
+$separator-gradient: linear-gradient(to right, #e6e7e6c8, #e4e5e4);
+$element-spacing: 30px;
 
 body {
-    font-family: "Poppins", sans-serif;
+    font-family: Poppins, sans-serif;
     font-weight: 400;
     font-style: normal;
     background-color: #f3f4f3;
@@ -47,15 +47,14 @@ ul {
     // margin-left: -40px;
     // display: contents;
 }
-.icon{
+
+.icon {
     display: inline-block;
     width: 16px;
     height: 16px;
     line-height: 24px;
-    &.home{
-
-    }
 }
+
 .wrapper {
     max-width: 1240px;
     padding: 0 global_vars.$gutter;
@@ -64,21 +63,23 @@ ul {
 }
 
 .separator {
-    height: $separatorWidth;
+    height: $separator-width;
     display: block;
-    background: $separatorgradient;
+    background: $separator-gradient;
 }
 
 .divider {
-    width: $separatorWidth;
-    background: $separatorgradient;
+    width: $separator-width;
+    background: $separator-gradient;
     order: 2;
 
 }
 
+
+
 header {
     .name {
-        margin-top: $elementSpacing;
+        margin-top: $element-spacing;
         font-size: functions.toRem(41);
         line-height: functions.toRem(43);
 
@@ -104,10 +105,12 @@ header {
 article {
     padding: 10px 0;
     font-size: 12px;
+
     &.wrapper {
-        margin-top: $elementSpacing;
+        margin-top: $element-spacing;
     }
-    ul{
+
+    ul {
         list-style-type: none;
         display: flex;
         flex-wrap: wrap;
@@ -116,7 +119,8 @@ article {
         // align-content: space-between;
         gap: global_vars.$gutter;
         margin: global_vars.$gutter 0;
-        li{
+
+        li {
             display: flex;
             flex-wrap: nowrap;
             align-content: center;
@@ -129,34 +133,49 @@ article {
 
 main {
     display: grid;
-    grid-template-columns: 210px $separatorWidth 1fr;
-    gap: 50px;
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap: wrap;
-    // align-content: space-between;
+    grid-template-columns: 210px $separator-width 1fr;
     gap: 25px;
+
+
+
     &.wrapper {
-        margin-top: $elementSpacing;
+        margin-top: $element-spacing;
     }
+
+
     .separator {
-        margin: $elementSpacing 0;
+        margin: $element-spacing 0;
     }
+
     section {
         order: 3;
         flex-grow: 1;
         width: auto;
+
+        .date-state {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            margin-bottom: 10px;
+            padding: 0;
+
+        }
     }
 
     aside {
         order: 1;
         flex-shrink: 0;
         width: 210px;
-        strong,
-        span{
-            display: block;
+
+        .content {
+
+            strong,
+            span {
+                display: block;
+            }
         }
-        
+
+
     }
 }
 
