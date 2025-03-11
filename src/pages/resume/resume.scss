@@ -168,13 +168,20 @@ main {
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
+            align-items: center;
             gap: 20px;
             li{
                 a{
                     display: flex;
                     flex-direction: column;
-                    align-items: center;                    
+                    align-items: center;    
+                    font-size: functions.toRem(11);                
                 }
+            }
+            &-title{
+                font-size: functions.toRem(12);
+                display: block;
+                margin: global_vars.$gutter 0 functions.toRem(5);
             }
         }
     }
