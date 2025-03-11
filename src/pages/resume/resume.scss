@@ -2,7 +2,6 @@
 @use '@shared/css/mixins';
 @use '@shared/css/functions';
 
-
 $separator-width: 3px;
 $separator-gradient: linear-gradient(to right, #e6e7e6c8, #e4e5e4);
 $element-spacing: 30px;
@@ -14,12 +13,10 @@ body {
     background-color: #f3f4f3;
     color: global_vars.$text-primary;
     font-size: functions.toRem(14);
-    // @include mixins.sm {    
-    //     font-size: 10rem; 
-    //  }
-    margin-bottom: 5rem;
+    margin-bottom: $element-spacing;
 }
-a{
+
+a {
     color: global_vars.$text-primary;
 
 }
@@ -29,10 +26,6 @@ h2,
 strong {
     color: global_vars.$text-secondary;
     text-transform: uppercase;
-}
-
-h1 {
-    // font-size: 2.563rem;
 }
 
 h2 {
@@ -48,8 +41,6 @@ h2 {
 ul {
     list-style-position: inside;
     padding-left: 3px;
-    // margin-left: -40px;
-    // display: contents;
 }
 
 .icon {
@@ -77,9 +68,14 @@ ul {
     background: $separator-gradient;
     order: 2;
 
+    @include mixins.xs {
+        display: none;
+    }
+
+    @include mixins.sm {
+        display: block;
+    }
 }
-
-
 
 header {
     .name {
@@ -139,8 +135,15 @@ article {
 
 main {
     display: grid;
-    grid-template-columns: 210px $separator-width 1fr;
     gap: 25px;
+
+    @include mixins.xs {
+        grid-template-columns: 1fr;
+    }
+
+    @include mixins.sm {
+        grid-template-columns: 210px $separator-width 1fr;
+    }
 
     &.wrapper {
         margin-top: $element-spacing;
@@ -151,12 +154,22 @@ main {
     }
 
     section {
-        order: 3;
+        // order: 3;
         flex-grow: 1;
         width: auto;
-        .business{
+
+        @include mixins.xs {
+            order: 1;
+        }
+
+        @include mixins.sm {
+            order: 3;
+        }
+
+        .business {
             display: block;
         }
+
         .date-state {
             display: flex;
             justify-content: space-between;
@@ -164,21 +177,24 @@ main {
             margin-bottom: 10px;
             padding: 0;
         }
-        .projects{
+
+        .projects {
             list-style-type: none;
             display: flex;
             flex-wrap: wrap;
             align-items: center;
             gap: 20px;
-            li{
-                a{
+
+            li {
+                a {
                     display: flex;
                     flex-direction: column;
-                    align-items: center;    
-                    font-size: functions.toRem(11);                
+                    align-items: center;
+                    font-size: functions.toRem(11);
                 }
             }
-            &-title{
+
+            &-title {
                 font-size: functions.toRem(12);
                 display: block;
                 margin: global_vars.$gutter 0 functions.toRem(5);
@@ -187,9 +203,17 @@ main {
     }
 
     aside {
-        order: 1;
+        // order: 1;
         flex-shrink: 0;
-        width: 210px;
+
+        // width: 210px;
+        @include mixins.xs {
+            order: 2;
+        }
+
+        @include mixins.sm {
+            order: 1;
+        }
 
         .content {
 
@@ -203,7 +227,6 @@ main {
     }
 }
 
-
 // Print rules
 @media print {
     body {
@@ -211,6 +234,10 @@ main {
     }
 }
 
+@page: first {
+    margin-top: 0; // top margin for first page of paper
+}
+
 @page {
-    margin: 0;
+    margin: 1rem 0;
 }

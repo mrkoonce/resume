@@ -1,8 +1,15 @@
 @use '@shared/css/functions';
 
 // Small screens
+@mixin xs {
+    @media (min-width: functions.breakpoint(xs) ) {
+        @content;
+    }
+}
+
+// Small screens
 @mixin sm {
-    @media (max-width: functions.breakpoint(sm) ) {
+    @media (min-width: functions.breakpoint(sm) ) {
         @content;
     }
 }
