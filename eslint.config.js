@@ -18,8 +18,6 @@ export default [
             "unicorn/prefer-set-has": 0,
             "no-script-url": 0,
             "n/no-unsupported-features/node-builtins": 0
-
         }
-
     }
 ];

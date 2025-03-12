@@ -5,6 +5,7 @@
     @return map-get( global_vars.$grid-breakpoints, $size);
 }
 
+// Convert px to rem
 @function toRem($value) {
     $remValue: ($value / 16) + rem; 
     @return $remValue;

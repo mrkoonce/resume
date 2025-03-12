@@ -5,6 +5,7 @@
 $separator-width: 3px;
 $separator-gradient: linear-gradient(to right, #e6e7e6c8, #e4e5e4);
 $element-spacing: 30px;
+$gutter:0.938rem;// 15 px
 
 body {
     font-family: Poppins, sans-serif;
@@ -50,7 +51,7 @@ ul {
 
 .wrapper {
     max-width: 1240px;
-    padding: 0 global_vars.$gutter;
+    padding: 0 $gutter;
     margin: 0 auto;
 
 }
@@ -88,12 +89,18 @@ ul {
 header {
     .name {
         margin-top: $element-spacing;
-        font-size: functions.toRem(41);
-        line-height: functions.toRem(41);
-
         span {
             font-weight: 300;
             color: #7b7c7b;
+        }
+        @include mixins.xs {
+            font-size: functions.toRem(39);
+            line-height: functions.toRem(39);
+        }
+    
+        @include mixins.sm {
+            font-size: functions.toRem(41);
+            line-height: functions.toRem(41);
         }
 
     }
@@ -127,8 +134,8 @@ article {
         justify-content: center;
         align-items: center;
         // align-content: space-between;
-        gap: global_vars.$gutter;
-        margin: global_vars.$gutter 0;
+        gap: $gutter;
+        margin: $gutter 0;
 
         li {
             display: flex;
@@ -207,7 +214,7 @@ main {
             &-title {
                 font-size: functions.toRem(12);
                 display: block;
-                margin: global_vars.$gutter 0 functions.toRem(5);
+                margin: $gutter 0 functions.toRem(5);
             }
         }
     }
