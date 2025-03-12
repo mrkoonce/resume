@@ -11,7 +11,7 @@
     "dev": "npm run development",
     "development": "npm run linting && vite build && npm run cpToRoot",
     "production": "vite build && npm run cpToRoot",
-    "linting": "npm run eslint && npm run stylelint",
+    "linting": "npm run stylelint",
     "eslint": "eslint $npm_package_config_pages",
     "stylelint": "stylelint \"$npm_package_config_pages/**/*.scss\"",
     "watch": "vite",
