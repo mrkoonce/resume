@@ -6,7 +6,7 @@ import assets from "./vite.config.assets";
 const currentUrl = 'localhost';
 
 export default defineConfig({
-    base: '/dist',
+    base: '//josephkoonce.com/dist',
     build: {
         cssTarget: ["safari16"],
         rollupOptions: {
