@@ -135,7 +135,6 @@ article {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        // align-content: space-between;
         gap: $gutter;
         margin: $gutter 0;
 
@@ -172,7 +171,6 @@ main {
     }
 
     section {
-        // order: 3;
         flex-grow: 1;
         width: auto;
 
@@ -242,7 +240,7 @@ main {
         .key-achievements {
             li {
                 margin-bottom: $gutter;
-                
+
                 strong {
                     display: block;
                 }
