@@ -16,4 +16,5 @@ export default [
     // Resume
     "src/pages/resume/index.html",
     "src/pages/resume/resume.scss",
+
 ];

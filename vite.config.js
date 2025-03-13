@@ -6,9 +6,10 @@ import assets from "./vite.config.assets";
 const currentUrl = 'localhost';
 
 export default defineConfig({
-    base: 'https://josephkoonce.com/dist',
+    base: '/dist/',
     build: {
         cssTarget: ["safari16"],
+        manifest:true,
         rollupOptions: {
             input: assets
         },

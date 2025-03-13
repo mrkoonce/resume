@@ -1,0 +1,48 @@
+{
+  "src/pages/resume/resume.scss": {
+    "file": "assets/resume-BTzOXBPK.css",
+    "src": "src/pages/resume/resume.scss",
+    "isEntry": true
+  },
+  "src/pdf/joseph_koonce_resume_c.pdf": {
+    "file": "assets/joseph_koonce_resume_c-CQabo1K-.pdf",
+    "src": "src/pdf/joseph_koonce_resume_c.pdf"
+  },
+  "src/shared/css/common.scss": {
+    "file": "assets/common-X3nmZlZ4.css",
+    "src": "src/shared/css/common.scss",
+    "isEntry": true
+  },
+  "src/shared/images/joseph_koonce_og_xl.png": {
+    "file": "assets/joseph_koonce_og_xl-CiedzgRq.png",
+    "src": "src/shared/images/joseph_koonce_og_xl.png"
+  },
+  "src/shared/images/project_logos/ajmadison-logo-vector.svg": {
+    "file": "assets/ajmadison-logo-vector-0Z8c_CmJ.svg",
+    "src": "src/shared/images/project_logos/ajmadison-logo-vector.svg"
+  },
+  "src/shared/images/project_logos/answerwin.png": {
+    "file": "assets/answerwin-DN94gQPw.png",
+    "src": "src/shared/images/project_logos/answerwin.png"
+  },
+  "src/shared/images/project_logos/games.png": {
+    "file": "assets/games-CNb0FLSz.png",
+    "src": "src/shared/images/project_logos/games.png"
+  },
+  "src/shared/images/project_logos/lotto.png": {
+    "file": "assets/lotto-C9Njt01G.png",
+    "src": "src/shared/images/project_logos/lotto.png"
+  },
+  "src/shared/images/project_logos/pchcom.png": {
+    "file": "assets/pchcom-DZumm2z_.png",
+    "src": "src/shared/images/project_logos/pchcom.png"
+  },
+  "src/shared/images/project_logos/rewards.png": {
+    "file": "assets/rewards-CPAR34V2.png",
+    "src": "src/shared/images/project_logos/rewards.png"
+  },
+  "src/shared/images/project_logos/slots.png": {
+    "file": "assets/slots-DCkSFcZJ.png",
+    "src": "src/shared/images/project_logos/slots.png"
+  }
+}
