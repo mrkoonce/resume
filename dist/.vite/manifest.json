@@ -1,12 +1,8 @@
 {
   "src/pages/resume/resume.scss": {
-    "file": "assets/resume-BTzOXBPK.css",
+    "file": "assets/resume-Blba4rXn.css",
     "src": "src/pages/resume/resume.scss",
     "isEntry": true
-  },
-  "src/pdf/joseph_koonce_resume_c.pdf": {
-    "file": "assets/joseph_koonce_resume_c-CQabo1K-.pdf",
-    "src": "src/pdf/joseph_koonce_resume_c.pdf"
   },
   "src/shared/css/common.scss": {
     "file": "assets/common-X3nmZlZ4.css",
