@@ -1,0 +1,267 @@
+@use '@shared/css/global_vars';
+@use '@shared/css/mixins';
+@use '@shared/css/functions';
+
+$separator-width: 3px;
+$separator-gradient: linear-gradient(to right, #e6e7e6c8, #e4e5e4);
+$element-spacing: 30px;
+$gutter: functions.toRem(15);
+
+body {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    background-color: #f3f4f3;
+    color: global_vars.$text-primary;
+    font-size: functions.toRem(14);
+    margin-bottom: $element-spacing;
+}
+
+a {
+    color: global_vars.$text-primary;
+}
+
+h1,
+h2,
+strong {
+    color: global_vars.$text-secondary;
+    text-transform: uppercase;
+}
+
+h2 {
+    margin-bottom: functions.toRem(20);
+    font-size: functions.toRem(18);
+}
+
+.bar {
+    background-color: #bcbebf;
+    height: 28px;
+}
+
+ul {
+    padding-left: 16px;
+}
+
+.icon {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    line-height: 24px;
+}
+
+.wrapper {
+    max-width: 1240px;
+    padding: 0 $gutter;
+    margin: 0 auto;
+
+}
+
+.separator {
+    height: $separator-width;
+    display: block;
+    background: $separator-gradient;
+}
+
+.divider {
+    width: $separator-width;
+    background: $separator-gradient;
+    order: 2;
+
+    @include mixins.xs {
+        display: none;
+    }
+
+    @include mixins.sm {
+        display: block;
+    }
+}
+
+.mobile-only {
+    @include mixins.xs {
+        display: block;
+    }
+
+    @include mixins.sm {
+        display: none;
+    }
+}
+
+header {
+    .name {
+        margin-top: $element-spacing;
+
+        span {
+            font-weight: 300;
+            color: #7b7c7b;
+        }
+
+        @include mixins.xs {
+            font-size: functions.toRem(39);
+            line-height: functions.toRem(39);
+        }
+
+        @include mixins.sm {
+            font-size: functions.toRem(41);
+            line-height: functions.toRem(41);
+        }
+
+    }
+
+    .title {
+        text-transform: uppercase;
+        color: #b8b9b8;
+        font-size: functions.toRem(18);
+        margin-top: functions.toRem(5);
+        display: inline-block;
+    }
+
+    .about {
+        margin-top: functions.toRem(19);
+
+    }
+}
+
+article {
+    padding: 10px 0;
+    font-size: 12px;
+
+    &.wrapper {
+        margin-top: $element-spacing;
+    }
+
+    ul {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: $gutter;
+        margin: $gutter 0;
+
+        li {
+            display: flex;
+            flex-wrap: nowrap;
+            align-content: center;
+            align-items: center;
+            gap: 5px;
+        }
+
+    }
+}
+
+main {
+    display: grid;
+
+    @include mixins.xs {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    @include mixins.sm {
+        grid-template-columns: 210px $separator-width 1fr;
+        gap: 25px;
+    }
+
+    &.wrapper {
+        margin-top: $element-spacing;
+    }
+
+    .separator {
+        margin: $element-spacing 0;
+    }
+
+    section {
+        flex-grow: 1;
+        width: auto;
+
+        @include mixins.xs {
+            order: 1;
+        }
+
+        @include mixins.sm {
+            order: 3;
+        }
+
+        .business {
+            display: block;
+        }
+
+        .date-state {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            margin-bottom: 10px;
+            padding: 0;
+        }
+
+        .projects {
+            list-style-type: none;
+            padding-left: 0;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 20px;
+
+            li {
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    font-size: functions.toRem(11);
+                }
+            }
+
+            &-title {
+                font-size: functions.toRem(12);
+                display: block;
+                margin: $gutter 0 functions.toRem(5);
+            }
+        }
+    }
+
+    aside {
+        flex-shrink: 0;
+
+        @include mixins.xs {
+            order: 2;
+        }
+
+        @include mixins.sm {
+            order: 1;
+        }
+
+        .content {
+            strong,
+            span {
+                display: block;
+            }
+        }
+
+        .key-achievements {
+            li {
+                margin-bottom: $gutter;
+
+                strong {
+                    display: block;
+                }
+            }
+        }
+
+
+    }
+}
+
+// Print rules
+@media print {
+    body {
+        print-color-adjust: exact;
+    }
+}
+
+@page :first {
+    margin-top: 0; // top margin for first page of paper
+}
+
+@page {
+    margin: 1rem 0;
+}

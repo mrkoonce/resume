@@ -1,0 +1,43 @@
+@use '@shared/css/functions';
+
+// Small screens
+@mixin xs {
+    @media (min-width: functions.breakpoint(xs) ) {
+        @content;
+    }
+}
+
+// Small screens
+@mixin sm {
+    @media (min-width: functions.breakpoint(sm) ) {
+        @content;
+    }
+}
+
+// Medium screens
+@mixin md {
+    @media (min-width: functions.breakpoint(md)) {
+        @content;
+    }
+}
+
+// Large screens
+@mixin lg {
+    @media (min-width: functions.breakpoint(lg)) {
+        @content;
+    }
+}
+
+// Extra large screens
+@mixin xl {
+    @media (min-width: functions.breakpoint(xl)) {
+        @content;
+    }
+}
+
+// Extra extra large screens
+@mixin xxl {
+    @media (min-width:functions.breakpoint(xxl)) {
+        @content;
+    }
+}

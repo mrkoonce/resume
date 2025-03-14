@@ -1,0 +1,12 @@
+@use '@shared/css/global_vars';
+
+// Function allows us to return a value from an array.
+@function breakpoint($size) {
+    @return map-get( global_vars.$grid-breakpoints, $size);
+}
+
+// Convert px to rem
+@function toRem($value) {
+    $remValue: ($value / 16) + rem; 
+    @return $remValue;
+}
