@@ -4,9 +4,6 @@
 
 This project is built using **HTML, CSS, and JavaScript** with **Vite** as the build tool. The resume is responsive and will adapt to any  screen size.
 
-## Project Structure
-
-
 ## Installation
 To get started, install dependencies using npm:
 
